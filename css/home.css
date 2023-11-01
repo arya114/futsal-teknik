@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+	
+	min-height: 100vh;
+	font-family: 'Exo 2', sans-serif;
+	background: linear-gradient(to bottom, #168AAD, #34A0A4);  
+}
+header{
+    height: 80px;
+    background: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+ul li a{
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+
+}
+li a::after{
+    content: "";
+    display: block;
+    height: 4px;
+    width: 0;
+    background: rgb(202, 201, 201);
+    transition: all .5s;
+}
+li a:hover::after{
+    width: 100%;
+}
+
+main{
+    display: flex;
+    height: calc(100vh - 80px);
+    align-items: center;
+    justify-content: center;
+
+}
+.gambar-content{
+    max-width: 670px;
+    height: auto;
+}
+.content-left{
+    width: 30%;
+}
+
+main h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: aliceblue;
+}
+main h3{
+    font-size: 25px;
+    color: aliceblue;
+    font-weight: 400;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+}
+button a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+.btn-more{
+    padding: 15px 30px;
+    background-color: #168AAD;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.signup-btn{
+    padding: 10px 15px;
+    background-color: #64ccec;
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 20px;
+}
