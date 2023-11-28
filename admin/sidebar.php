@@ -41,7 +41,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="transaksi.php">
                 <i class="fas fa-fw fa-dollar-sign"></i>
                 <span>Transaksi</span></a>
         </li>

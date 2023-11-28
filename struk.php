@@ -30,6 +30,11 @@
         </nav>
     </header>
     <main>
+    <?php
+            include 'function/koneksi.php';
+            $data = mysqli_query($koneksi, "SELECT * FROM transaksi");
+            $d = mysqli_fetch_array($data)
+            ?>
         <div class="container">
             <div class="ket-content">
                 <table>
@@ -41,32 +46,32 @@
                     <tr>
                         <td>Nama Pemesan</td>
                         <td>:</td>
-                        <td class="">Didi Nur Rahmad</td>
+                        <td class=""><?php echo ucwords($d['nama_pemesan']); ?></td>
                     </tr>
                     <tr>
                         <td>Lapangan</td>
                         <td>:</td>
-                        <td class="">Lapangan 1</td>
+                        <td class=""><?php echo ucwords($d['nama_lapangan']); ?></td>
                     </tr>
                     <tr>
                         <td>Jenis Permukaan</td>
                         <td>:</td>
-                        <td class="">Rumput Sintetis</td>
+                        <td class=""><?php echo ucwords($d['jenis_lapangan']); ?></td>
                     </tr>
                     <tr>
                         <td>Tanggal</td>
                         <td>:</td>
-                        <td class="">12-12-12</td>
+                        <td class=""><?php echo ucwords($d['tanggal']); ?></td>
                     </tr>
                     <tr>
-                        <td>Waktu</td>
+                        <td>Durasi</td>
                         <td>:</td>
-                        <td class="">5 jam</td>
+                        <td class=""><?php echo ucwords($d['durasi']); ?></td>
                     </tr>
                     <tr>
-                        <td>Harga Sewa</td>
+                        <td>Total Harga</td>
                         <td>:</td>
-                        <td class="harga">Rp.100.000</td>
+                        <td class="harga"><?php echo ucwords($d['total_pembayaran']); ?></td>
                     </tr>
                 </table>
                 

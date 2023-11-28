@@ -63,7 +63,7 @@
         <div class="right-content">
             <div class="container">
                 <h2>Pemesanan Tiket Lapangan</h2>
-                <form id="bookingForm">
+                <form action="lbooking.php" >
                     <label for="namaPemesan">Nama Pemesan:</label>
                     <input type="text" id="namaPemesan" name="namaPemesan" required>
 
