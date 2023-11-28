@@ -1,17 +1,22 @@
 * {
   box-sizing: border-box;
 }
+
+header{
+  background: linear-gradient(to bottom, #168aad, #34a0a4);
+  position: relative;
+  z-index: 5;
+
+}
+
 body {
   font-family: "Exo 2", sans-serif;
   margin: 0;
-}
-.mySlides {
-  display: none;
-}
-img {
-  vertical-align: middle;
+  background-color: #ececec;
   
 }
+.mySlides {display: none}
+img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
@@ -21,8 +26,7 @@ img {
 }
 
 /* Next & previous buttons */
-.prev,
-.next {
+.prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -35,18 +39,20 @@ img {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+
 }
 
 /* Caption text */
@@ -72,18 +78,17 @@ img {
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 0 2px;
-  background-color: #ffffff;
+  background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
-  background-color: #82c3e1;
+.active, .dot:hover {
+  background-color: #717171;
 }
 
 /* Fading animation */
@@ -91,6 +96,83 @@ img {
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
+
+
+button a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+.btn-more{
+  padding: 15px 30px;
+  background-color: #168AAD;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+
+/* footer */
+.content {
+  text-align: center;
+  padding: 20px;
+}
+
+footer {
+  background-color: #28799c7e;
+  color: #fff;
+  position: relative;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-section {
+  width: 30%;
+  padding: 10px;
+  text-align: left;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1em;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #000000;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+table{
+  width: 100%;
+  box-shadow: #000000;
+}
+td{
+  text-align: center;
+}
+
+
+@media (max-width: 500px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+  
+}
+
 
 @keyframes fade {
   from {
