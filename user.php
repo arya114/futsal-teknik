@@ -67,62 +67,48 @@
     <br>
     <!-- card booking lapangan -->
     <h3>DAFTAR LAPANGAN</h3>
+            <?php
+            include 'function/koneksi.php';
+            $data = mysqli_query($koneksi, "SELECT * FROM lapangan");
+            while ($d = mysqli_fetch_array($data)) {
+                ?>
     <div class="container">
         <div class="card">
-            <img src="img/lapangan.webp" alt="" class="card-image">
-            <div class="desk-content">
-                <h3>Lapangan 1</h3>
-                <table>
-                    <tr>
-                        <th>Nama</th>
-                        <th>Ket</th>
-                    </tr>
-                    <tr>
-                        <td>Jenis Permukaan</td>
-                        <td class="jenis">Rumput Sintetis</td>
-                    </tr>
-                    <tr>
-                        <td>Fasilitas</td>
-                        <td class="fasilitas">Pencahayaan LED,Toilet,Kantin</td>
-                    </tr>
-                    <tr>
-                        <td>Harga Sewa</td>
-                        <td class="harga">Rp.100.000</td>
-                    </tr>
-                </table>
-                <button class="book-btn"><a href="booking.php">Booking</a></button>
-            </div>
-        </div>
-    </div>
-    </div>
+                <img src="admin/img/<?php echo $d['gambar_lapangan']; ?>" alt="Gambar Lapangan"
+                    style="max-width: 100px; max-height: 100px;">
+                <div class="desk-content">
+                    <h3>
+                        <?php echo ucwords($d['nama_lapangan']); ?>
+                    </h3>
+                    <table>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Ket</th>
+                        </tr>
+                        <tr>
+                            <td>Jenis Permukaan</td>
+                            <td class="jenis">
+                                <?php echo ucwords($d['jenis_lapangan']); ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Harga Sewa</td>
+                            <td class="harga">
+                                <?php echo 'Rp ' . number_format($d['harga'], 0, ',', '.'); ?>
+                            </td>
+                        </tr>
+                    </table>
 
-    <div class="container">
-        <div class="card">
-            <img src="img/jaring.jpg" alt="" class="card-image">
-            <div class="desk-content">
-                <h3>Lapangan 1</h3>
-                <table>
-                    <tr>
-                        <th>Nama</th>
-                        <th>Ket</th>
-                    </tr>
-                    <tr>
-                        <td>Jenis Permukaan</td>
-                        <td class="jenis">Rumput Sintetis</td>
-                    </tr>
-                    <tr>
-                        <td>Fasilitas</td>
-                        <td class="fasilitas">Pencahayaan LED,Toilet,Kantin</td>
-                    </tr>
-                    <tr>
-                        <td>Harga Sewa</td>
-                        <td class="harga">Rp.100.000</td>
-                    </tr>
-                </table>
                 <button class="book-btn"><a href="booking.php">Booking</a></button>
             </div>
         </div>
     </div>
+    </div>
+                    <?php
+            }
+            ?>
+
+   
     </div>
 
     <footer>
